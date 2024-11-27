@@ -1,0 +1,495 @@
+[
+  {
+    "id": 1,
+    "name": "Bystander Effect",
+    "base": "",
+    "origin": "american",
+    "type": "concept",
+    "description": "A sociopsychological phenomenon whereby a person is less likely to take responsibility for action or inaction when others are present."
+  },
+  {
+    "id": 2,
+    "name": "Semantic satiation",
+    "base": "",
+    "origin": "american",
+    "type": "concept",
+    "description": "A psychological phenomenon in which repetition causes a word or phrase to temporarily lose meaning for the listener, who then perceives the speech as repeated meaningless sounds."
+  },
+  {
+    "id": 3,
+    "name": "Petrichor",
+    "base": "",
+    "origin": "greek",
+    "type": "noun",
+    "description": "A distinctive scent, usually described as earthy, pleasant, or sweet, produced by rainfall on very dry ground."
+  },
+  {
+    "id": 4,
+    "name": "Pareidolia",
+    "base": "",
+    "origin": "greek",
+    "type": "noun",
+    "description": "The imagined perception of a pattern or meaning where it does not actually exist, as in considering the moon to have human features."
+  },
+  {
+    "id": 5,
+    "name": "Mamihlapinatapai",
+    "base": "",
+    "origin": "yagán",
+    "type": "noun",
+    "description": "“A look that without words is shared by two people who want to initiate something, but that neither will start”"
+  },
+  {
+    "id": 6,
+    "name": "Liar paradox",
+    "base": "",
+    "origin": "greek",
+    "type": "concept",
+    "description": "The classical liar paradox is the statement of a liar that he or she is lying, for instance declaring “I am lying”."
+  },
+  {
+    "id": 7,
+    "name": "Just-world hypothesis",
+    "base": "",
+    "origin": "greek",
+    "type": "concept",
+    "description": "The just-world hypothesis is the assumption that the end of all noble actions will eventually be rewarded and all evil actions eventually punished."
+  },
+  {
+    "id": 8,
+    "name": "Jamais vu",
+    "base": "never seen",
+    "origin": "french",
+    "type": "noun",
+    "description": "A jamais vu refers to the phenomenon of experiencing a situation that one recognizes in some fashion, but nonetheless seems very unfamiliar."
+  },
+  {
+    "id": 9,
+    "name": "Endling",
+    "base": "",
+    "origin": "british",
+    "type": "noun",
+    "description": "An endling is the last known individual of a species or subspecies. Once the endling dies, the species becomes extinct."
+  },
+  {
+    "id": 10,
+    "name": "Eigengrau",
+    "base": "Intrinsic grey",
+    "origin": "german",
+    "type": "noun",
+    "description": "Eigengrau (“own gray”), is the uniform dark gray background that many people report seeing in the absence of light."
+  },
+  {
+    "id": 11,
+    "name": "Derealization",
+    "base": "",
+    "origin": "german",
+    "type": "noun",
+    "description": "An alteration in perception leading to the feeling that the reality of the world has been changed or lost."
+  },
+  {
+    "id": 12,
+    "name": "Egg of Columbus",
+    "base": "",
+    "origin": "italian",
+    "type": "noun",
+    "description": "An egg of Columbus or Columbus’ egg refers to a brilliant idea or discovery that seems simple or easy after the fact."
+  },
+
+  {
+    "id": 13,
+    "name": "Barnum effect",
+    "link": "https://en.wikipedia.org/wiki/Barnum_effect",
+    "description": "The Barnum effect is a common psychological phenomenon whereby individuals give high accuracy ratings to descriptions of their personality that supposedly are tailored specifically to them, yet which are in fact vague and general enough to apply to a wide range of people."
+  },
+  {
+    "id": 14,
+    "name": "Black swan theory",
+    "link": "https://en.wikipedia.org/wiki/Black_swan_theory",
+    "description": "The black swan theory or theory of black swan events is a metaphor that describes an event that comes as a surprise, has a major effect, and is often inappropriately rationalized after the fact with the benefit of hindsight."
+  },
+  {
+    "id": 15,
+    "name": "Capgras delusion",
+    "link": "https://en.wikipedia.org/wiki/Capgras_delusion",
+    "description": "Capgras delusion or Capgras syndrome is a psychiatric disorder in which a person holds a delusion that a friend, spouse, parent, another close family member, or pet has been replaced by an identical impostor."
+  },
+  {
+    "id": 16,
+    "name": "Confabulation",
+    "link": "https://en.wikipedia.org/wiki/Confabulation",
+    "description": "In psychology, confabulation is a memory error defined as the production of fabricated, distorted, or misinterpreted memories about oneself or the world."
+  },
+  {
+    "id": 17,
+    "name": "Cryptomnesia",
+    "link": "https://en.wikipedia.org/wiki/Cryptomnesia",
+    "description": "Cryptomnesia occurs when a forgotten memory returns without its being recognized as such by the subject, who believes it is something new and original."
+  },
+  {
+    "id": 18,
+    "name": "Diffusion of responsibility",
+    "link": "https://en.wikipedia.org/wiki/Diffusion_of_responsibility",
+    "description": "Diffusion of responsibility is a sociopsychological phenomenon whereby a person is less likely to take responsibility for action or inaction when other bystanders or witnesses are present."
+  },
+  {
+    "id": 19,
+    "name": "Groupthink",
+    "link": "https://en.wikipedia.org/wiki/Groupthink",
+    "description": "Groupthink is a psychological phenomenon that occurs within a group of people in which the desire for harmony or conformity in the group results in an irrational or dysfunctional decision-making outcome."
+  },
+  {
+    "id": 20,
+    "name": "Design by committee",
+    "link": "https://en.wikipedia.org/wiki/Design_by_committee",
+    "description": "Design by committee is a pejorative term for a project that has many designers involved but no unifying plan or vision."
+  },
+  {
+    "id": 21,
+    "name": "Little Eichmanns",
+    "link": "https://en.wikipedia.org/wiki/Little_Eichmanns",
+    "description": "'Little Eichmanns' is a term used to describe people whose actions, while on an individual scale may seem relatively harmless even to themselves, taken collectively create destructive and immoral systems in which they are actually complicit."
+  },
+  {
+    "id": 22,
+    "name": "Tragedy of the commons",
+    "link": "https://en.wikipedia.org/wiki/Tragedy_of_the_commons",
+    "description": "The tragedy of the commons is a situation in which individuals, who have open access to a resource, act independently according to their own self-interest and, contrary to the common good of all users, cause depletion of the resource through their uncoordinated action in the case that there are too many users related to the available resources."
+  },
+  {
+    "id": 23,
+    "name": "Omission bias",
+    "link": "https://en.wikipedia.org/wiki/Omission_bias",
+    "description": "Omission bias is the phenomenon in which people prefer omission (inaction) over commission (action) and people tend to judge harm as a result of commission more negatively than harm as a result of omission."
+  },
+  {
+    "id": 24,
+    "name": "Don't throw the baby out with the bathwater",
+    "link": "https://en.wikipedia.org/wiki/Don%27t_throw_the_baby_out_with_the_bathwater",
+    "description": "'Don't throw the baby out with the bathwater' is an idiomatic expression for an avoidable error in which something good or of value is eliminated when trying to get rid of something unwanted."
+  },
+  {
+    "id": 25,
+    "name": "Double entendre",
+    "link": "https://en.wikipedia.org/wiki/Double_entendre",
+    "description": "A double entendre is a figure of speech that is devised to have a double meaning, of which one is typically obvious, whereas the other often conveys a message that would be too socially awkward, sexually suggestive, or offensive to state directly."
+  },
+  {
+    "id": 26,
+    "name": "Dualism in cosmology",
+    "link": "https://en.wikipedia.org/wiki/Dualism_in_cosmology",
+    "description": "Dualism in cosmology is the moral or spiritual belief that two fundamental concepts exist, which often oppose each other."
+  },
+  {
+    "id": 27,
+    "name": "Dystheism",
+    "link": "https://en.wikipedia.org/wiki/Dystheism",
+    "description": "Dystheism is the belief that a god is not wholly good and can even be considered evil."
+  },
+  {
+    "id": 28,
+    "name": "Echo chamber",
+    "link": "https://en.wikipedia.org/wiki/Echo_chamber_(media)",
+    "description": "In news media and social media, an echo chamber is an environment or ecosystem in which participants encounter beliefs that amplify or reinforce their preexisting beliefs by communication and repetition inside a closed system and insulated from rebuttal."
+  },
+  {
+    "id": 29,
+    "name": "Entomological warfare",
+    "link": "https://en.wikipedia.org/wiki/Entomological_warfare",
+    "description": "Entomological warfare is a type of biological warfare that uses insects to interrupt supply lines by damaging crops, or to directly harm enemy combatants and civilian populations."
+  },
+  {
+    "id": 30,
+    "name": "Euthyphro dilemma",
+    "link": "https://en.wikipedia.org/wiki/Euthyphro_dilemma",
+    "description": "The Euthyphro dilemma is found in Plato's dialogue Euthyphro, in which Socrates asks Euthyphro, 'Is the pious loved by the gods because it is pious, or is it pious because it is loved by the gods?'"
+  },
+  {
+    "id": 31,
+    "name": "False memory",
+    "link": "https://en.wikipedia.org/wiki/False_memory",
+    "description": "In psychology, a false memory is a phenomenon where someone recalls something that did not happen or recalls it differently from the way it actually happened."
+  },
+  {
+    "id": 32,
+    "name": "Flyting",
+    "link": "https://en.wikipedia.org/wiki/Flyting",
+    "description": "Flyting or fliting is a contest consisting of the exchange of insults between two parties, often conducted in verse."
+  },
+  {
+    "id": 33,
+    "name": "Flower constancy",
+    "link": "https://en.wikipedia.org/wiki/Flower_constancy",
+    "description": "Flower constancy is the tendency of individual pollinators to exclusively visit certain flower species or morphs within a species, bypassing other available flower species that could potentially contain more nectar."
+  },
+  {
+    "id": 34,
+    "name": "Free-rider problem",
+    "link": "https://en.wikipedia.org/wiki/Free-rider_problem",
+    "description": "In the social sciences, the free-rider problem is a type of market failure that occurs when those who benefit from resources, public goods and common pool resources do not pay for them."
+  },
+  {
+    "id": 35,
+    "name": "Garden hermit",
+    "link": "https://en.wikipedia.org/wiki/Garden_hermit",
+    "description": "Garden hermits or ornamental hermits were hermits encouraged to live in purpose-built hermitages, follies, grottoes, or rockeries on the estates of wealthy landowners. Such hermits would be encouraged to remain permanently on site, where they could be fed, cared for, and consulted for advice, or viewed for entertainment."
+  },
+  {
+    "id": 36,
+    "name": "Gordian Knot",
+    "link": "https://en.wikipedia.org/wiki/Gordian_Knot",
+    "description": "The Cutting of the Gordian Knot is an Ancient Greek legend associated with Alexander the Great, who in 333 BC when challenged to unloose the complex Knot of great local fame, instead of exercising genius in untangling it laboriously as expected, dramatically cut through it with his sword, thus exercising another form of mental genius."
+  },
+  {
+    "id": 37,
+    "name": "Hate-watching",
+    "link": "https://en.wikipedia.org/wiki/Hate-watching",
+    "description": "Hate-watching is the activity of watching a television show or film with the intention of acquiring amusement from the mockery of its content or subject."
+  },
+  {
+    "id": 38,
+    "name": "Herbivore men",
+    "link": "https://en.wikipedia.org/wiki/Herbivore_men",
+    "description": "Herbivore men or grass-eater men is a term used in Japan to describe young men who express little interest in getting married or being assertive in relationships with women."
+  },
+  {
+    "id": 39,
+    "name": "Hikikomori",
+    "link": "https://en.wikipedia.org/wiki/Hikikomori",
+    "description": "Hikikomori, also known as acute social withdrawal, is total withdrawal from society and seeking extreme degrees of social isolation and confinement."
+  },
+  {
+    "id": 40,
+    "name": "Hindsight bias",
+    "link": "https://en.wikipedia.org/wiki/Hindsight_bias",
+    "description": "Hindsight bias, also known as the knew-it-all-along phenomenon or creeping determinism, is the common tendency for people to perceive past events as having been more predictable than they were."
+  },
+  {
+    "id": 41,
+    "name": "If a tree falls in a forest",
+    "link": "https://en.wikipedia.org/wiki/If_a_tree_falls_in_a_forest",
+    "description": "'If a tree were to fall on an island where there were no human beings would there be any sound?' 'No. Sound is the sensation excited in the ear when the air or other medium is set in motion.'"
+  },
+  {
+    "id": 42,
+    "name": "Ikigai",
+    "link": "https://en.wikipedia.org/wiki/Ikigai",
+    "description": "Ikigai is a Japanese concept referring to something that gives a person a sense of purpose, a reason for living. "
+  },
+  {
+    "id": 43,
+    "name": "Illusory contours",
+    "link": "https://en.wikipedia.org/wiki/Illusory_contours",
+    "description": "Illusory contours or subjective contours are visual illusions that evoke the perception of an edge without a luminance or color change across that edge."
+  },
+  {
+    "id": 44,
+    "name": "In medias res",
+    "link": "https://en.wikipedia.org/wiki/In_medias_res",
+    "description": "A narrative work beginning in medias res opens in the midst of the plot. Often, exposition is bypassed and filled in gradually, through dialogue, flashbacks or description of past events."
+  },
+  {
+    "id": 45,
+    "name": "Inflicted insight",
+    "link": "https://en.wikipedia.org/wiki/Inflicted_insight",
+    "description": "Inflicted insight is a possible consequence for subjects participating in certain kinds of research. It occurs when the subject is given insight into his or her flaws through his or her participation in an experiment, often unexpectedly causing emotional pain."
+  },
+  {
+    "id": 46,
+    "name": "Just-world hypothesis",
+    "link": "https://en.wikipedia.org/wiki/Just-world_hypothesis",
+    "description": "The just-world hypothesis or just-world fallacy is the cognitive bias that assumes that 'people get what they deserve' – that actions will have morally fair and fitting consequences for the actor."
+  },
+  {
+    "id": 47,
+    "name": "Kodokushi",
+    "link": "https://en.wikipedia.org/wiki/Kodokushi",
+    "description": "Kodokushi or lonely death refers to a Japanese phenomenon of people dying alone and remaining undiscovered for a long period of time."
+  },
+  {
+    "id": 48,
+    "name": "Last man",
+    "link": "https://en.wikipedia.org/wiki/Last_man",
+    "description": "The last man is the archetypal passive nihilist. He is tired of life, takes no risks, and seeks only comfort and security."
+  },
+  {
+    "id": 49,
+    "name": "Ludonarrative dissonance",
+    "link": "https://en.wikipedia.org/wiki/Ludonarrative_dissonance",
+    "description": "Ludonarrative dissonance is the conflict between a video game's narrative told through the story and the narrative told through the gameplay."
+  },
+  {
+    "id": 50,
+    "name": "Minority influence",
+    "link": "https://en.wikipedia.org/wiki/Minority_influence",
+    "description": "Minority influence, a form of social influence, takes place when a member of a minority group influences the majority to accept the minority's beliefs or behavior."
+  },
+  {
+    "id": 51,
+    "name": "Misinformation effect",
+    "link": "https://en.wikipedia.org/wiki/Misinformation_effect",
+    "description": "The misinformation effect occurs when a person's recall of episodic memories becomes less accurate because of post-event information."
+  },
+  {
+    "id": 52,
+    "name": "Mono no aware",
+    "link": "https://en.wikipedia.org/wiki/Mono_no_aware",
+    "description": "Mono no aware, 'an empathy toward things', or 'a sensitivity to ephemera', is a Japanese idiom for the awareness of impermanence of things, and both a transient gentle sadness at their passing as well as a longer, deeper gentle sadness about this state being the reality of life."
+  },
+  {
+    "id": 53,
+    "name": "Hyperlink cinema",
+    "link": "https://en.wikipedia.org/wiki/Hyperlink_cinema",
+    "description": "Hyperlink cinema is a style of filmmaking characterised by complex or multilinear narrative structures with multiple characters under one unifying theme."
+  },
+  {
+    "id": 54,
+    "name": "Metamemory",
+    "link": "https://en.wikipedia.org/wiki/Metamemory",
+    "description": "Metamemory or Socratic awareness, a type of metacognition, is both the introspective knowledge of one's own memory capabilities (and strategies that can aid memory) and the processes involved in memory self-monitoring."
+  },
+  {
+    "id": 55,
+    "name": "Paris syndrome",
+    "link": "https://en.wikipedia.org/wiki/Paris_syndrome",
+    "description": "Paris syndrome is a sense of extreme disappointment exhibited by some individuals when visiting Paris, who feel that the city was not what they had expected."
+  },
+  {
+    "id": 56,
+    "name": "Phantosmia",
+    "link": "https://en.wikipedia.org/wiki/Phantosmia",
+    "description": "Phantosmia (phantom smell), also called an olfactory hallucination or a phantom odor, is smelling an odor that is not actually there."
+  },
+  {
+    "id": 57,
+    "name": "Plant arithmetic",
+    "link": "https://en.wikipedia.org/wiki/Plant_arithmetic",
+    "description": "Plant arithmetic is a form of plant cognition whereby plants appear to perform arithmetic operations – a form of number sense in plants."
+  },
+  {
+    "id": 58,
+    "name": "Problem of Hell",
+    "link": "https://en.wikipedia.org/wiki/Problem_of_Hell",
+    "description": "The problem of Hell is an ethical problem in the religions of Christianity, Islam and Judaism, in which the existence of Hell for the punishment of souls in the Afterlife is regarded as inconsistent with the notion of a just, moral, and omnibenevolent, omniscient supreme being."
+  },
+  {
+    "id": 59,
+    "name": "Problem of evil",
+    "link": "https://en.wikipedia.org/wiki/Problem_of_evil",
+    "description": "The problem of evil is the question of how to reconcile the existence of evil and suffering with an omnipotent, omnibenevolent, and omniscient God."
+  },
+  {
+    "id": 60,
+    "name": "RAS syndrome",
+    "link": "https://en.wikipedia.org/wiki/RAS_syndrome",
+    "description": "RAS syndrome (where 'RAS' stands for 'redundant acronym syndrome', making the phrase 'RAS syndrome' homological) is the redundant use of one or more of the words that make up an acronym in conjunction with the abbreviated form."
+  },
+  {
+    "id": 61,
+    "name": "Rat king",
+    "link": "https://en.wikipedia.org/wiki/Rat_king",
+    "description": "A rat king is a collection of rats whose tails are intertwined and bound together in some way. This may be a result of an entangling material like hair, a sticky substance such as sap or gum, or the tails being tied together."
+  },
+  {
+    "id": 62,
+    "name": "Resource holding potential",
+    "link": "https://en.wikipedia.org/wiki/Resource_holding_potential",
+    "description": "In biology, resource holding potential (RHP) is the ability of an animal to win an all-out fight if one were to take place. The term was coined to disambiguate physical fighting ability from the motivation to persevere in a fight."
+  },
+  {
+    "id": 63,
+    "name": "Schadenfreude",
+    "link": "https://en.wikipedia.org/wiki/Schadenfreude",
+    "description": "Schadenfreude is the experience of pleasure, joy, or self-satisfaction that comes from learning of or witnessing the troubles, failures, or humiliation of another."
+  },
+  {
+    "id": 64,
+    "name": "Social loafing",
+    "link": "https://en.wikipedia.org/wiki/Social_loafing",
+    "description": "In social psychology, social loafing is the phenomenon of a person exerting less effort to achieve a goal when they work in a group than when working alone."
+  },
+  {
+    "id": 65,
+    "name": "Source amnesia",
+    "link": "https://en.wikipedia.org/wiki/Source_amnesia",
+    "description": "Source amnesia is the inability to remember where, when or how previously learned information has been acquired, while retaining the factual knowledge."
+  },
+  {
+    "id": 66,
+    "name": "Spectral evidence",
+    "link": "https://en.wikipedia.org/wiki/Spectral_evidence",
+    "description": "Spectral evidence is a form of legal evidence based upon the testimony of those who claim to have experienced visions."
+  },
+  {
+    "id": 67,
+    "name": "Status quo ante bellum",
+    "link": "https://en.wikipedia.org/wiki/Status_quo_ante_bellum",
+    "description": "The term status quo ante bellum is a Latin phrase meaning 'the situation as it existed before the war'. The term was originally used in treaties to refer to the withdrawal of enemy troops and the restoration of prewar leadership."
+  },
+  {
+    "id": 68,
+    "name": "Sunk cost",
+    "link": "https://en.wikipedia.org/wiki/Sunk_cost",
+    "description": "In economics and business decision-making, a sunk cost (also known as retrospective cost) is a cost that has already been incurred and cannot be recovered."
+  },
+  {
+    "id": 69,
+    "name": "Suspension of disbelief",
+    "link": "https://en.wikipedia.org/wiki/Suspension_of_disbelief",
+    "description": "Suspension of disbelief, is the avoidance of critical thinking or logic in examining something unreal or impossible in reality, such as a work of speculative fiction, in order to believe it for the sake of enjoyment."
+  },
+  {
+    "id": 70,
+    "name": "Virtue signalling",
+    "link": "https://en.wikipedia.org/wiki/Virtue_signalling",
+    "description": "Virtue signalling is 'an attempt to show other people that you are a good person, by expressing opinions that will be acceptable to them, indicating that one has virtue merely by expressing disgust or favour for certain political ideas or cultural happenings'."
+  },
+  {
+    "id": 71,
+    "name": "Volunteer's dilemma",
+    "link": "https://en.wikipedia.org/wiki/Volunteer%27s_dilemma",
+    "description": "The volunteer's dilemma game models a situation in which each player can either make a small sacrifice that benefits everybody, or instead wait in hope of benefiting from someone else's sacrifice."
+  },
+  {
+    "id": 72,
+    "name": "Waggle dance",
+    "link": "https://en.wikipedia.org/wiki/Waggle_dance",
+    "description": "Waggle dance is a term used in beekeeping for a particular figure-eight dance of the honey bee. By performing this dance, successful foragers can share information about the direction and distance to patches of flowers yielding nectar and pollen, to water sources, or to new nest-site locations with other members of the colony."
+  },
+  {
+    "id": 73,
+    "name": "Weasel word",
+    "link": "https://en.wikipedia.org/wiki/Weasel_word",
+    "description": "A weasel word, or anonymous authority, is an informal term for words and phrases aimed at creating an impression that something specific and meaningful has been said, when in fact only a vague or ambiguous claim has been communicated."
+  },
+  {
+    "id": 74,
+    "name": "Zeitgeist",
+    "link": "https://en.wikipedia.org/wiki/Zeitgeist",
+    "description": "A Zeitgeist is an invisible agent, force or Daemon dominating the characteristics of a given epoch in world history."
+  },
+  {
+    "id": 75,
+    "name": "Zugzwang",
+    "link": "https://en.wikipedia.org/wiki/Zugzwang",
+    "description": "Zugzwang is a situation found in chess and other turn-based games wherein one player is put at a disadvantage because of their obligation to make a move; a player is said to be 'in zugzwang' when any legal move will worsen their position."
+  },
+  {
+    "id": 76,
+    "name": "Six degrees of separation",
+    "link": "https://en.wikipedia.org/wiki/Six_degrees_of_separation",
+    "description": "Six degrees of separation is the idea that all people are six or fewer social connections away from each other."
+  },
+  {
+    "id": 77,
+    "name": "Weltschmerz",
+    "link": "https://en.wikipedia.org/wiki/Weltschmerz",
+    "description": "Weltschmerz is a literary concept describing the feeling experienced by an individual who believes that reality can never satisfy the expectations of the mind, resulting in 'a mood of weariness or sadness about life arising from the acute awareness of evil and suffering'"
+  },
+  {
+    "id": 78,
+    "name": "Penis fencing",
+    "link": "https://en.wikipedia.org/wiki/Penis_fencing",
+    "description": "Penis fencing is a mating behavior engaged in by many species of flatworm, such as Pseudobiceros hancockanus. Species which engage in the practice are hermaphroditic; each individual has both egg-producing ovaries and sperm-producing testes."
+  }
+]
