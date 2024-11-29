@@ -82,13 +82,8 @@ select {
 
 
 html {
-  background-color: #e4a758;
-  scrollbar-width: thin;
-  scrollbar-color: #00000066 transparent;
-  background: 
-	linear-gradient(24deg, rgba(228,167,88,1), rgba(255,252,252,0)),
-	radial-gradient(circle at 95% 50%, rgba(166,213,214,1), rgba(255,255,255,0)),
-	url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='5.7' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  background-image: url(/image-mesh-gradient.png);
+  background-size: cover;
   background-attachment: fixed;
 }
 

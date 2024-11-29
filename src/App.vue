@@ -19,6 +19,7 @@ const shift = useKeyModifier('Shift')
 const el = ref<HTMLElement | null>(document.documentElement)
 const { y } = useScroll(el, { behavior: "smooth" })
 const scrollTo = computed(() => active.value - 4 > 0 ? active.value - 4 : 0)
+const showHint = ref(true)
 
 watch(active, () => {
   const button = buttons.value[active.value - 1]
@@ -60,13 +61,12 @@ onMounted(() => {
 <template>
   <main>
     <div class="grid">
-      <button v-for="element in list" :key="element.id" @click="set(element.id)">
+      <button class="word" v-for="element in list" :key="element.id" @click="set(element.id)">
         <p><span v-if="element.id < 10">0</span>{{ element.id }}</p>
         <p>{{ element.name }}</p>
       </button>
     </div>
-    <p class="hint" @click="(e: MouseEvent) => (e.target as HTMLElement)?.remove()">Tab & Shift + Tab ||| Arrows to
-      navigate</p>
+
     <Transition mode="out-in">
       <div v-if="selected" :key="selected!.id" class="selected">
         <div class="header">
@@ -76,6 +76,31 @@ onMounted(() => {
         <p>{{ selected!.description }}</p>
       </div>
     </Transition>
+    <div class="info">
+      <transition name="appear">
+        <div v-if="showHint" class="info-hint">
+          <div class="keys">
+            <img class="key" src="./assets/tab.svg" alt="">
+            <img class="key" src="./assets/shift.svg" alt="">
+          </div>
+        </div>
+      </transition>
+      <button class="info-button" @click="(e: MouseEvent) => {showHint = !showHint; (e.target as HTMLElement)?.parentElement?.blur()} " :class="{discreet : !showHint}">
+        <transition name="slide" mode="out-in">
+          <img v-if="showHint" src="./assets/close.svg" alt="">
+          <img v-else src="./assets/open.svg" alt="">
+        </transition>
+      </button>
+      <transition name="appear">
+        <div v-if="showHint" class="info-hint">
+          <div class="keys">
+            <img class="key" src="./assets/left.svg" alt="">
+            <p></p>
+            <img class="key" src="./assets/right.svg" alt="">
+          </div>
+        </div>
+      </transition>
+    </div>
   </main>
 </template>
 
@@ -84,12 +109,11 @@ onMounted(() => {
   height: fit-content;
   width: 25vw;
   display: flex;
-  gap: 0.25rem;
   flex-flow: column;
   padding: 1rem;
 }
 
-button {
+.word {
   background-color: transparent;
   border: none;
   display: flex;
@@ -98,7 +122,7 @@ button {
   overflow: hidden;
   gap: 0.5rem;
   padding: 0;
-  height: 3.5rem;
+  height: 3.9rem;
 
   &:hover,
   &:focus {
@@ -174,19 +198,74 @@ button {
   }
 }
 
-.hint {
+.info {
   position: fixed;
-  right: 1rem;
+  top: 3rem;
+  right: 4rem;
+
+  left: 25vw;
+  width: calc(100vw - 25vw);
+  padding-right: 16%;
+
   z-index: 600;
-  bottom: 1rem;
-  font-size: 1.5rem;
-  line-height: 1;
-  opacity: 0.4;
-  cursor: pointer;
   display: flex;
   align-items: center;
-  font-style: oblique;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.info-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  border-radius: 100%;
+  width: 4rem;
+  height: 2rem;
+  outline: 2px solid #000;
+  overflow: hidden;
+  // opacity: 0.4;
+  cursor: pointer;
+  transition: opacity 0.3s;
+
+  img {
+    width: 1.5rem;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+  }
+  
+  .discreet {
+  opacity: 0.4;
+}
+
+.info-hint {
+  width: 5rem;
+  font-size: 1.75rem;
+  line-height: 1;
+  // opacity: 0.4;
+  height: 2rem;
+  display: flex;
+  align-items: center;
   padding: 0.5rem;
+  gap: 1rem;
+
+  &:first-of-type {
+    justify-content: flex-end;
+  }
+
+  .keys {
+    display: flex;
+    gap: 0.25rem;
+  }
+
+  .key {
+    width: 1.25rem;
+  }
 }
 
 .text {
@@ -234,6 +313,32 @@ button {
 .v-leave-to {
   transform: translateY(1rem);
   opacity: 0;
+}
+
+.appear-enter-active,
+.appear-leave-active {
+  transition: opacity 0.3s;
+}
+
+.appear-enter-from {
+  opacity: 0;
+}
+
+.appear-leave-to {
+  opacity: 0;
+}
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: transform 0.3s;
+}
+
+.slide-enter-from {
+  transform: translateY(-1.5rem);
+}
+
+.slide-leave-to {
+  transform: translateY(1.5rem);
 }
 
 
