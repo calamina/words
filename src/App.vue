@@ -4,9 +4,17 @@ import { computed, onMounted, ref, watch, type Ref } from "vue";
 import { onKeyStroke } from '@vueuse/core'
 import { useKeyModifier } from '@vueuse/core'
 import { useScroll } from '@vueuse/core'
+import { useMediaQuery } from '@vueuse/core'
+
+const el = ref<HTMLElement | null>(document.documentElement)
+
+const isSmallScreen = useMediaQuery('(max-width: 1024px)')
+const shift = useKeyModifier('Shift')
+const { y } = useScroll(el, { behavior: "smooth" })
 
 let active = ref(0);
-const buttons: Ref<HTMLButtonElement[]> = ref([])
+
+const listButtons: Ref<HTMLButtonElement[]> = ref([])
 const list = ref(List.sort((a, b) => {
   return a.id - b.id;
 }));
@@ -15,35 +23,43 @@ const selected = computed(() =>
     return element.id === active.value;
   })
 );
-const shift = useKeyModifier('Shift')
-const el = ref<HTMLElement | null>(document.documentElement)
-const { y } = useScroll(el, { behavior: "smooth" })
 const scrollTo = computed(() => active.value - 4 > 0 ? active.value - 4 : 0)
 const showHint = ref(true)
+const showList = ref(false)
 
 watch(active, () => {
-  const button = buttons.value[active.value - 1]
+  const button = listButtons.value[active.value - 1]
   button.focus({ preventScroll: true })
+})
+
+watch(showList, () => {
+  if (showList.value === true) {
+    setTimeout(() => {
+      const button = listButtons.value[active.value - 1]
+      button.focus()
+    }, 50);
+  }
 })
 
 const previous = () => {
   active.value = active.value === 1 ? list.value.length : active.value - 1
-  y.value = buttons.value[scrollTo.value].offsetTop
+  y.value = listButtons.value[scrollTo.value].offsetTop
 }
 const next = () => {
   active.value = active.value === list.value.length ? 1 : active.value + 1
-  y.value = buttons.value[scrollTo.value].offsetTop
+  y.value = listButtons.value[scrollTo.value].offsetTop
 }
 
 const set = (id: number) => {
   active.value = id
-  y.value = buttons.value[scrollTo.value].offsetTop
+  y.value = listButtons.value[scrollTo.value].offsetTop
+  showList.value = false
 }
 
-onKeyStroke('ArrowLeft', (e) => {
+onKeyStroke('ArrowLeft', () => {
   previous();
 })
-onKeyStroke('ArrowRight', (e) => {
+onKeyStroke('ArrowRight', () => {
   next();
 })
 onKeyStroke('Tab', (e) => {
@@ -52,51 +68,80 @@ onKeyStroke('Tab', (e) => {
 })
 
 onMounted(() => {
-  buttons.value = Array.from(document.querySelectorAll('button'))
+  listButtons.value = Array.from(document.querySelectorAll('.word'))
   active.value = 1
-  y.value = buttons.value[0].offsetTop
+  y.value = listButtons.value[0].offsetTop
 });
 </script>
 
 <template>
   <main>
-    <div class="grid">
-      <button class="word" v-for="element in list" :key="element.id" @click="set(element.id)">
-        <p><span v-if="element.id < 10">0</span>{{ element.id }}</p>
-        <p>{{ element.name }}</p>
+    <div v-if="isSmallScreen" class="mobile">
+      <transition name="appear">
+        <button v-if="!showList" class="info-button" @click="previous()">
+          <img src="./assets/left.svg" alt="">
+        </button>
+      </transition>
+      <button class="info-button" @click="(showList = !showList) && listButtons[active - 1]?.focus()">
+        <img src="./assets/open.svg" alt="">
       </button>
+      <transition name="appear">
+        <button v-if="!showList" class="info-button" @click="next()">
+          <img src="./assets/right.svg" alt="">
+        </button>
+      </transition>
     </div>
+    <Transition>
+      <div class="grid" v-show="isSmallScreen ? showList : true">
+        <button class="word" v-for="element in list" :key="element.id" @click="set(element.id)">
+          <p><span v-if="element.id < 10">0</span>{{ element.id }}</p>
+          <p>{{ element.name }}</p>
+        </button>
+      </div>
+    </Transition>
 
     <Transition mode="out-in">
-      <div v-if="selected" :key="selected!.id" class="selected">
+      <div v-if="selected && isSmallScreen ? !showList : true" :key="selected?.id" class="selected">
         <div class="header">
-          <h2>{{ selected!.name }}</h2>
+          <h2>{{ selected?.name }}</h2>
         </div>
         <p>*</p>
-        <p>{{ selected!.description }}</p>
+        <p>{{ selected?.description }}</p>
       </div>
     </Transition>
     <div class="info">
       <transition name="appear">
-        <div v-if="showHint" class="info-hint">
-          <div class="keys">
-            <img class="key" src="./assets/tab.svg" alt="">
-            <img class="key" src="./assets/shift.svg" alt="">
+        <div class="info-hide" v-if="showHint">
+          <div class="info-hint">
+            <div class="keys">
+              <img class="key" src="./assets/tab.svg" alt="">
+              <img class="key" src="./assets/shift.svg" alt="">
+            </div>
           </div>
+          <button class="info-button" @click="previous()">
+            <img src="./assets/left.svg" alt="">
+          </button>
         </div>
       </transition>
-      <button class="info-button" @click="(e: MouseEvent) => {showHint = !showHint; (e.target as HTMLElement)?.parentElement?.blur()} " :class="{discreet : !showHint}">
+      <button class="info-button"
+        @click="(e: MouseEvent) => { showHint = !showHint; (e.target as HTMLElement)?.parentElement?.blur() }"
+        :class="{ discreet: !showHint }">
         <transition name="slide" mode="out-in">
           <img v-if="showHint" src="./assets/close.svg" alt="">
           <img v-else src="./assets/open.svg" alt="">
         </transition>
       </button>
       <transition name="appear">
-        <div v-if="showHint" class="info-hint">
-          <div class="keys">
-            <img class="key" src="./assets/left.svg" alt="">
-            <p></p>
-            <img class="key" src="./assets/right.svg" alt="">
+        <div class="info-hide" v-if="showHint">
+          <button class="info-button" @click="next()">
+            <img src="./assets/right.svg" alt="">
+          </button>
+          <div class="info-hint">
+            <div class="keys">
+              <img class="key" src="./assets/left.svg" alt="">
+              <p></p>
+              <img class="key" src="./assets/right.svg" alt="">
+            </div>
           </div>
         </div>
       </transition>
@@ -105,6 +150,18 @@ onMounted(() => {
 </template>
 
 <style lang="scss">
+.mobile {
+  z-index: 900;
+  display: flex;
+  gap: 1rem;
+  width: 100vw;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding-bottom: 3rem;
+}
+
 .grid {
   height: fit-content;
   width: 25vw;
@@ -214,6 +271,10 @@ onMounted(() => {
   gap: 2rem;
 }
 
+.info-hide {
+  display: flex;
+}
+
 .info-button {
   display: flex;
   align-items: center;
@@ -225,7 +286,6 @@ onMounted(() => {
   height: 2rem;
   outline: 2px solid #000;
   overflow: hidden;
-  // opacity: 0.4;
   cursor: pointer;
   transition: opacity 0.3s;
 
@@ -237,9 +297,9 @@ onMounted(() => {
   &:focus {
     opacity: 1;
   }
-  }
-  
-  .discreet {
+}
+
+.discreet {
   opacity: 0.4;
 }
 
@@ -247,7 +307,6 @@ onMounted(() => {
   width: 5rem;
   font-size: 1.75rem;
   line-height: 1;
-  // opacity: 0.4;
   height: 2rem;
   display: flex;
   align-items: center;
@@ -256,6 +315,10 @@ onMounted(() => {
 
   &:first-of-type {
     justify-content: flex-end;
+  }
+
+  &:last-of-type {
+    justify-content: center;
   }
 
   .keys {
@@ -349,6 +412,46 @@ onMounted(() => {
 
   100% {
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 0.8rem;
+  }
+
+  .info {
+    display: none;
+  }
+
+  .grid {
+    padding-top: 4rem;
+    display: grid;
+    width: 100%;
+    height: calc(100vh - 8rem);
+    overflow-y: scroll;
+    scrollbar-width: none;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .word {
+    height: 4.5rem;
+
+    & p:last-of-type {
+      font-size: 2.25rem;
+    }
+  }
+
+  .selected {
+    left: 0;
+    padding-right: 0;
+    width: 100vw;
+    padding: 1rem 2rem;
+  }
+
+  .header h2 {
+    font-size: 6rem;
+    line-height: 5rem;
   }
 }
 </style>
