@@ -112,12 +112,12 @@ onMounted(() => {
     <div class="info">
       <transition name="appear">
         <div class="info-hide" v-if="showHint">
-          <div class="info-hint">
+          <!-- <div class="info-hint">
             <div class="keys">
               <img class="key" src="./assets/tab.svg" alt="">
               <img class="key" src="./assets/shift.svg" alt="">
             </div>
-          </div>
+          </div> -->
           <button class="info-button" @click="previous()">
             <img src="./assets/left.svg" alt="">
           </button>
@@ -136,13 +136,13 @@ onMounted(() => {
           <button class="info-button" @click="next()">
             <img src="./assets/right.svg" alt="">
           </button>
-          <div class="info-hint">
+          <!-- <div class="info-hint">
             <div class="keys">
               <img class="key" src="./assets/left.svg" alt="">
               <p></p>
               <img class="key" src="./assets/right.svg" alt="">
             </div>
-          </div>
+          </div> -->
         </div>
       </transition>
     </div>

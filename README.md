@@ -9,5 +9,5 @@
 ## todo
 - add info / menu for sources + better shortcut info
 - add search / filters 
-- better buttons
-- update ocntent :)
+- better buttons (for now navigation info hidden : too noisy)
+- update content :)
